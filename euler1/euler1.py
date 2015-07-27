@@ -4,7 +4,7 @@ multiples = []
 total = 0;
 
 print("Finds the sum of all multiples of 3 or 5 below a max number. \n")
-limit = input("Max number? ")
+limit = int(input("Max number? "))
 
 def isMult(x):
     if(x % 3 == 0 or x % 5 == 0):
@@ -16,9 +16,11 @@ def isMult(x):
 #print('4: ', isMult(4))
 #print('5: ', isMult(5))
 
-for i in range(0, int(limit)):
+for i in range(0, limit):
     if(isMult(i)):
         multiples.append(i)
 
 for i in range(0, len(multiples)):
     total += i
+
+print("The sum of all multiples of 3 or 5 in %d is %d" % (limit, total))
