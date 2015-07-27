@@ -20,5 +20,5 @@ for i in range(0, int(limit)):
     if(isMult(i)):
         multiples.append(i)
 
-for i in range(0, multiples.length):
+for i in range(0, len(multiples)):
     total += i
