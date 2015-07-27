@@ -16,7 +16,7 @@ def isMult(x):
 #print('4: ', isMult(4))
 #print('5: ', isMult(5))
 
-for i in range(0, limit):
+for i in range(0, int(limit)):
     if(isMult(i)):
         multiples.append(i)
 
