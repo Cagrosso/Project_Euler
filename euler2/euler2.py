@@ -7,9 +7,18 @@ def fib_to(n):
     for i in range(2, n+1):
         x = fib[i - 1]
         y = fib[i - 2]
-        print("This is round %d: %d + %d" % (i, x, y))
+        #print("This is round %d: %d + %d" % (i, x, y)) #debug
         fib.append(x + y)
     return fib
 
-n = input("Enter a number to find that fibonacci number: ")
-print(fib_to(int(n)))
+def is_even(list):
+    even = []
+    for i in range(0, len(list)):
+        if(list[i] % 2 == 0):
+            even.append(list[i])
+    return even
+
+#33 gives the largest fibonacci number before 4 million
+
+fib = fib_to(33)
+print("Sum: %d" % sum(is_even(fib)))
