@@ -5,10 +5,10 @@
 def fib_to(n):
     fib = [0,1]
     for i in range(2, n+1):
-        left = fib[-1]
-        right = fib[-2]
-        print("This is round %d: %d + %d" % (i, left, right)
-        fib.append(fib[-1] + fib[-2])
+        x = fib[i - 1]
+        y = fib[i - 2]
+        print("This is round %d: %d + %d" % (i, x, y))
+        fib.append(x + y)
     return fib
 
 n = input("Enter a number to find that fibonacci number: ")
